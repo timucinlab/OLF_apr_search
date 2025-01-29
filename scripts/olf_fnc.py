@@ -5,8 +5,8 @@ from MDAnalysis.analysis import contacts
 from MDAnalysis.tests.datafiles import PSF, DCD
 
 # Load the traj
-u = mda.Universe("/Volumes/My_Passport/myoc/run_results/final_dcds/olf_6M_urea/input.psf",
-                 "/Volumes/My_Passport/myoc/run_results/final_dcds/olf_6M_urea/step5.dcd")
+u = mda.Universe("path_to_psf",
+                 "path_to_dcd")
 
 sel_0 = "protein and resid 268 to 317"
 sel_1 = "protein and resid 328 to 359"
@@ -71,7 +71,7 @@ average_contacts = np.mean(ca5.timeseries[:, 1])
 print('Average contacts between sel4 and sel0: {:.2f}'.format(average_contacts))
 
 # Save the contact number matrices for each frame to the specified path
-output_path = "/path_to_output"
+output_path = "path_to_output"
 
 contact_matrices = []
 for i, ca in enumerate([ca1, ca2, ca3, ca4, ca5], start=1):
