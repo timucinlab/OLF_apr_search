@@ -1,7 +1,7 @@
 library(bio3d)
 
-mypdbfile <- "/path_to_pdb"
-mydcdfile <- "/path_to_dcd"
+mypdbfile <- "path_to_pdb"
+mydcdfile <- "path_to_dcd"
 
 dcd <- read.dcd(mydcdfile)
 pdb <- read.pdb(mypdbfile)
