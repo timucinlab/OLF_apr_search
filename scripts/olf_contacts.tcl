@@ -1,6 +1,6 @@
 set n [molinfo top get numframes]
 # Open the output file
-set output [open "ure6.contacts.dat" w]
+set output [open "path_to_output.dat" w]
 puts $output "frame bladeAB_atomcontact bladeBC_atomcontact bladeCD_atomcontact bladeDE_atomcontact bladeEA_atomcontact bladeAB_rescontact bladeBC_rescontact bladeCD_rescontact bladeDE_rescontact bladeEA_rescontact "
 
 # Define selections
