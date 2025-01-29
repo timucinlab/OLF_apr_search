@@ -1,6 +1,6 @@
 set n [molinfo top get numframes]
 
-set output [open "6M_urea_diSu.sasa.dat" w]
+set output [open "path_to_output.dat" w]
 puts $output "frame sasa_protein sasa_bladeA_wrt sasa_bladeA sasa_bladeB_wrt sasa_bladeB sasa_bladeC_wrt sasa_bladeC sasa_bladeD_wrt sasa_bladeD sasa_bladeE_wrt sasa_bladeE"
 
 set sel [atomselect top "protein"]
