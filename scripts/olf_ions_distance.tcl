@@ -58,4 +58,7 @@ close $outfile
 }
 
 distance "protein and resid 478 and name CA and noh" "resid 602 and name CAL" 5000 r_distance_atom-atom_cal.txt d_distance_atom-atom_cal.txt
-distance "protein and resid 478 and name CA and noh" "resid 602 and name CAL" 5000 r_distance_atom-atom_cal.txt d_distance_atom-atom_cal.txt 
+distance "protein and resid 478 and name CA and noh" "resid 602 and name CAL" 5000 r_distance_atom-atom_cal.txt d_distance_atom-atom_cal.txt
+
+#distance "protein and resid 478 and name CA and noh" "resid 601 and name SOD" 5000 r_distance_atom-atom_sod.txt d_distance_atom-atom_sod.txt
+#distance "protein and resid 478 and name CA and noh" "resid 601 and name SOD" 5000 r_distance_atom-atom_sod.txt d_distance_atom-atom_sod.txt 
