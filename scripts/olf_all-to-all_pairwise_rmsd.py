@@ -2,16 +2,12 @@ import MDAnalysis as mda
 from MDAnalysis.analysis import diffusionmap, align
 import matplotlib.pyplot as plt
 import numpy as np
-print(np.__version__)
-
 
 u = mda.Universe("path_to_psf",
                  "path_to_dcd")
 
-
 # Align the trajectory on protein
 aligner = align.AlignTraj(u, u, select='protein', in_memory=True).run()
-
 
 # Calculate the distance matrix for protein 
 matrix = diffusionmap.DistanceMatrix(u, select='protein').run()
@@ -23,8 +19,8 @@ plt.ylabel('system_name', weight='bold', fontsize=12)
 
 # Add color bar
 cbar = plt.colorbar(label='RMSD (Å)')
-cbar.ax.tick_params(labelsize=16)  # Increase font size for color bar numbers
-cbar.set_label('RMSD (Å)', fontsize=16)  # Increase font size for color bar label
+cbar.ax.tick_params(labelsize=16) 
+cbar.set_label('RMSD (Å)', fontsize=16)  
 
 ax = plt.gca()
 ax.set_xticks([])
@@ -32,8 +28,8 @@ ax.set_yticks([])
 
 plt.title("Protein (ref:protein)", fontsize=18)
 
-# Save the plot as a PDF figure
-output_path = '/path_to_output_prot-prot.pdf'
+# Save the plot as a PDF 
+output_path = 'path_to_output_prot-prot.pdf'
 plt.savefig(output_path, format='pdf',bbox_inches="tight")
 plt.close()
 
@@ -51,8 +47,8 @@ plt.ylabel('system_name', weight='bold', fontsize=12)
 
 # Add color bar
 cbar = plt.colorbar(label='RMSD (Å)')
-cbar.ax.tick_params(labelsize=16)  # Increase font size for color bar numbers
-cbar.set_label('RMSD (Å)', fontsize=16)  # Increase font size for color bar label
+cbar.ax.tick_params(labelsize=16)  
+cbar.set_label('RMSD (Å)', fontsize=16) 
 
 ax = plt.gca()
 ax.set_xticks([])
@@ -60,8 +56,8 @@ ax.set_yticks([])
 
 plt.title("β-strands (ref:β-strands)", fontsize=18)
 
-# Save the plot as a PDF figure
-output_path = '/path_to_output_beta-beta.pdf''
+# Save the plot as a PDF 
+output_path = 'path_to_output_beta-beta.pdf''
 plt.savefig(output_path, format='pdf',bbox_inches="tight") ##kenarlara oturması için bbox inches ekledim
 plt.close()
 
@@ -79,8 +75,8 @@ plt.ylabel('system_name', weight='bold', fontsize=12)
 
 # Add color bar 
 cbar = plt.colorbar(label='RMSD (Å)')
-cbar.ax.tick_params(labelsize=16)  # Increase font size for color bar numbers
-cbar.set_label('RMSD (Å)', fontsize=16)  # Increase font size for color bar label
+cbar.ax.tick_params(labelsize=16) 
+cbar.set_label('RMSD (Å)', fontsize=16)  
 
 ax = plt.gca()
 ax.set_xticks([])
@@ -88,7 +84,7 @@ ax.set_yticks([])
 
 plt.title("Protein (ref:β-strands)", fontsize=18)
 
-
-output_path = '/path_to_output_beta-prot.pdf'
+# Save the plot as a PDF 
+output_path = 'path_to_output_beta-prot.pdf'
 plt.savefig(output_path, format='pdf', bbox_inches="tight")  # Correct alignment
 plt.close()
