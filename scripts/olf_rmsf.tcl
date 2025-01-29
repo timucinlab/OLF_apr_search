@@ -1,5 +1,5 @@
 # Set the path for output file
-set output_path "directory_to_output"
+set output_path "path_to_output"
 set output [open $output_path w]
 puts $output "idx resid rmsf_all rmsf_last500"
 
