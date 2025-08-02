@@ -1,1 +1,1 @@
-This project collects OLF MD simulations scripts
+This project collects OLF MD simulations scripts.
